@@ -23,5 +23,29 @@ class DeepController extends Controller
      } else {
         return ["Result"=>"Operation Failed"];
      }
-}
+ }
+    public function update(Request $req){
+
+        $tab = Tab::find($req->id);
+
+        $tab->name = $req->name;
+        $tab->title = $req->title;
+        $tab->address = $req->address;
+
+
+        $result = $tab->save();
+
+        if($result){
+
+            return ["Result"=>"Data has been Updated"];
+
+        } else {
+            return ["Result"=>"Data updation failed"];
+        }
+
+
+    }
+
+
+
 }

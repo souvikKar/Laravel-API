@@ -27,3 +27,6 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 //Route::get("present",[DeepController::class,'present']); for routing
 
 Route::post("present",[DeepController::class,'present']);
+
+Route::put("up",[DeepController::class,'update']);
+
