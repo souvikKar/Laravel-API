@@ -30,3 +30,4 @@ Route::post("present",[DeepController::class,'present']);
 
 Route::put("up",[DeepController::class,'update']);
 
+Route::delete("delete/{id}",[DeepController::class,'delete']);

@@ -43,6 +43,18 @@ class DeepController extends Controller
             return ["Result"=>"Data updation failed"];
         }
 
+    }
+
+    public function delete($id){
+        $tab = Tab::find($id);
+        $result = $tab->delete();
+
+        if ($result){
+            return ["Result"=>"Your data has been deleted..."];
+        } else {
+            return ["Result"=>"Your data has not been deleted..."];
+        }
+
 
     }
 
